@@ -11,6 +11,8 @@ export SAVEHIST=10000
 
 # Shell parameters
 export EDITOR='vim'
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 export LC_COLLATE='C'
 export REPORTTIME=10
 export TIMEFMT=$'\nreal  %*E\nuser  %*U\nsys   %*S'

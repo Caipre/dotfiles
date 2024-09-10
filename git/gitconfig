@@ -19,6 +19,7 @@
    subf = submodule update --init --checkout --force --recursive
    tags = tag -l
    up = !git fetch && git rebase && git sub
+   brrm = !git branch --no-color --merged | rg -v '(^\\*|master|main|dev)' | xargs git branch -d
 [color]
    ui = always
 [core]
@@ -35,7 +36,7 @@
    prune = true
    pruneTags = true
 [commit]
-   gpgsign = true
+	gpgsign = true
 [rerere]
    enabled = true
 [filter "lfs"]
@@ -45,3 +46,7 @@
    required = true
 [init]
    defaultBranch = main
+[gpg]
+	program = /opt/homebrew/bin/gpg
+#[merge]
+   #conflictstyle = zdiff3

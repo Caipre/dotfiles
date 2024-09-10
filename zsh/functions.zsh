@@ -1,3 +1,8 @@
+function bk() {
+   local name="$1"
+   mv "${name}" "${name}.bk"
+}
+
 function pyv() {
    local name="$1"
    local version="${2:-3.7.1}"
